@@ -1,3 +1,6 @@
+.タイトル {
+    text-align: center;
+}
 .重要 {
     color : red;
     background-color: yellow;
