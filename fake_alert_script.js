@@ -6,3 +6,4 @@ function a() {
 }
 let button = document.getElementById("button");
 button.addEventListener("click",a);
+alert("このページはフェイクだよ！")
