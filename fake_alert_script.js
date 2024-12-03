@@ -4,7 +4,7 @@ function a() {
     const currentUrl = window.location.href;
 
     // URLの末尾に"/form.html"を追加
-    const newUrl = currentUrl + "/form.html";
+    const newUrl = currentUrl + "form.html";
 
     // 新しいURLに移動
     window.location.href = newUrl;
