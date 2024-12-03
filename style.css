@@ -6,3 +6,7 @@
     background-color: yellow;
     text-align: center;
 }
+
+.横幅合わせ画像 {
+    img { width: 100vw; }
+}
