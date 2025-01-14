@@ -1,13 +1,9 @@
 .タイトル {
     text-align: center;
 }
+
 .重要 {
-    color : red;
+    color: red;
     background-color: yellow;
     text-align: center;
-}
-
-.横幅合わせ画像 {
-    width: 100vw;
-    height:auto;
 }

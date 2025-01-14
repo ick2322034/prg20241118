@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>市川天文台(Fake)</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="重要"><h1>※これはフェイクです※</h1></div>
-        <div class="タイトル"><h1>市川天文台(Fake)</h1></div>
-        <form>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>市川天文台(Fake)</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function question() {
+            if (window.confirm("申し込みますか？")) {
+                location.href = "./result.html";
+            } else {
+                alert("キャンセルしました。");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="重要">
+        <h1>※これはフェイクです※</h1>
+    </div>
+    <div class="タイトル">
+        <h1>市川天文台(Fake)</h1>
+    </div>
+    <form>
+        <fieldset>
             <legend>申し込みフォーム</legend>
             <div>
-                <input type="radio" id="星空観察会">
+                <input type="radio" id="星空観察会" name="contact">
                 <label id="星空観察会">星空観察会</label>
 
-                <input type="radio" id="館長の話">
+                <input type="radio" id="館長の話" name="contact">
                 <label id="館長の話">館長の話を聞く会</label>
             </div>
-        </form>
-        <button onclick="history.back()">戻る</button>
-    </body>
+            <div>
+                お名前<input type="text">
+            </div>
+            <div>
+                電話番号<input type="text">
+            </div>
+        </fieldset>
+        <input type="button" value="送　信" onclick="question()">
+    </form>
+    <button onclick="location.href='./index.html'">戻る</button>
+</body>
+
 </html>
