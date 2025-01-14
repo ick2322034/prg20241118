@@ -9,7 +9,31 @@
 
     <script>
         function question() {
-            if (window.confirm("申し込みますか？")) {
+            const contact = document.querySelector('input[name="contact"]:checked')?.value;
+            const name = document.querySelector('input[type="text"][placeholder="お名前"]').value.trim();
+            const phoneNumber = document.querySelector('input[type="text"][placeholder="電話番号"]').value.trim();
+
+            let message = "申し込み内容を確認してください。\n\n";
+
+            if (contact) {
+                message += `イベント: ${contact}\n`;
+            } else {
+                message += "イベントが選択されていません。\n";
+            }
+
+            if (name) {
+                message += `お名前: ${name}\n`;
+            } else {
+                message += "お名前が入力されていません。\n";
+            }
+
+            if (phoneNumber) {
+                message += `電話番号: ${phoneNumber}`;
+            } else {
+                message += "電話番号が入力されていません。";
+            }
+
+            if (window.confirm(message)) {
                 location.href = "./result.html";
             } else {
                 alert("キャンセルしました。");
@@ -29,18 +53,18 @@
         <fieldset>
             <legend>申し込みフォーム</legend>
             <div>
-                <input type="radio" id="星空観察会" name="contact">
-                <label id="星空観察会">星空観察会</label>
+                <input type="radio" id="星空観察会" name="contact" value="星空観察会">
+                <label for="星空観察会">星空観察会</label>
 
-                <input type="radio" id="館長の話" name="contact">
-                <label id="館長の話">館長の話を聞く会</label>
+                <input type="radio" id="館長の話" name="contact" value="館長の話">
+                <label for="館長の話">館長の話を聞く会</label>
             </div>
             <div>
-                お名前<input type="text">
+                お名前<input type="text" placeholder="お名前">
             </div>
             <div>
-                電話番号<input type="text">
-            </div>
+                電話番号<input type="text" placeholder="電話番号">
+            </div>  
         </fieldset>
         <input type="button" value="送　信" onclick="question()">
     </form>
